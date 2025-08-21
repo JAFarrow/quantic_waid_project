@@ -1,0 +1,1 @@
+from .newsletter_controller import upsert_newsletter_customer

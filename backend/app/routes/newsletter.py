@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from ..controllers import upsert_newsletter_customer
+from ..controllers import subscribe_customer_to_newsletter
 
 newsletter_bp = Blueprint('newsletter', __name__)
 
@@ -10,8 +10,8 @@ def handle_newsletter_signup():
     customer_data = {
         'name': data.get('name'),
         'email': data.get('email'),
-        'phone_number': data.get('phone')
+        'phone_number': data.get('phone_number')
     }
 
-    response, status = upsert_newsletter_customer(customer_data)
+    response, status = subscribe_customer_to_newsletter(customer_data)
     return jsonify(response), status

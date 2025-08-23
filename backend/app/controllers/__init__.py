@@ -1,1 +1,2 @@
-from .newsletter_controller import upsert_newsletter_customer
+from .newsletter_controller import subscribe_customer_to_newsletter
+from .reservation_controller import make_reservation

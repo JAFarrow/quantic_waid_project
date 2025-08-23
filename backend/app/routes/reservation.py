@@ -4,7 +4,7 @@ from ..controllers import make_reservation
 reservation_bp = Blueprint('reservation', __name__)
 
 @reservation_bp.route('/reservation', methods=['POST'])
-def handle_newsletter_signup():
+def handle_reservation_booking():
     data = request.form
 
     resevation_data = {

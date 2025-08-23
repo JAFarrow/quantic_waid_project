@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
+from .routes import register_routes
 import os
 
 db = SQLAlchemy()
@@ -22,7 +23,6 @@ def create_app():
 
     db.init_app(app)
 
-    from .routes import register_routes
     register_routes(app)
 
     return app

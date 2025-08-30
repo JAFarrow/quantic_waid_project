@@ -8,9 +8,7 @@ const Home = () => {
       color: 'var(--color-text)',
       padding: '2rem',
       minHeight: '100vh',
-      fontFamily: 'Arial, sans-serif' // Adjust as needed for theme consistency
     }}>
-      {/* Hero section with high-quality image for consistent theme */}
       <section style={{
         textAlign: 'center',
         marginBottom: '3rem'

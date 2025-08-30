@@ -12,22 +12,41 @@ const Menu = () => {
       padding: '2rem',
       minHeight: '100vh'
     }}>
+      <style>
+        {`
+          .menu-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            gap: 2rem;
+          }
+
+          @media (max-width: 768px) {
+            .menu-section {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .menu-section img {
+              width: 100%;
+              max-width: 300px;
+              height: auto;
+            }
+          }
+        `}
+      </style>
       <h1 style={{
         color: 'var(--color-secondary)',
         textAlign: 'center',
-        marginBottom: '2rem'
+        marginBottom: '2rem',
+        fontSize: '2.5em'
       }}>Our Menu</h1>
       
       <div style={{
         maxWidth: '800px',
         margin: '0 auto'
       }}>
-        <section style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          marginBottom: '3rem',
-          gap: '2rem'
-        }}>
+        <section className="menu-section">
           <img 
             src={starter}
             alt="Appetizing starters display" 
@@ -52,12 +71,7 @@ const Menu = () => {
           </div>
         </section>
         
-        <section style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          marginBottom: '3rem',
-          gap: '2rem'
-        }}>
+        <section className="menu-section">
           <img 
             src={main} 
             alt="Delicious main courses presentation" 
@@ -85,12 +99,7 @@ const Menu = () => {
           </div>
         </section>
         
-        <section style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          marginBottom: '3rem',
-          gap: '2rem'
-        }}>
+        <section className="menu-section">
           <img 
             src={dessert} 
             alt="Sweet desserts assortment" 
@@ -115,12 +124,7 @@ const Menu = () => {
           </div>
         </section>
         
-        <section style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          marginBottom: '3rem',
-          gap: '2rem'
-        }}>
+        <section className="menu-section">
           <img 
             src={beverages}
             alt="Refreshing beverages selection" 
